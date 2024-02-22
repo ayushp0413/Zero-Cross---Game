@@ -1,0 +1,89 @@
+*,*::before,::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif , 'Poppins';
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(75, 131, 149);
+    display: grid;
+    place-items: center;
+}
+
+.game-info {
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    /* grid se vo thoda niche center hua hua  */
+    position: absolute;   
+    top: 3rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(228, 230, 230, 0.647);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.tic-tac-toe {
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(228, 230, 230, 0.647);
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    padding: 2rem;
+    border-radius: 9px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+.box {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size:3rem;
+    color: white;
+}
+
+.box1,.box2,.box4,.box5 {
+
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+.box3,.box6 {
+    border-bottom: 3px solid white;
+}
+
+.box7,.box8 {
+    border-right: 3px solid white;
+}
+
+.btn {
+    all: unset;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(228, 230, 230, 0.647);
+    border-radius: 9px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-weight: 700;
+    position: absolute;   
+    bottom: 3rem;
+    display: none;
+}
+
+.btn.active {
+    display: flex;
+}
+
+
+.win {
+    background-color: green;
+}
